@@ -3,7 +3,7 @@
 # Python dependencies
 python==3.9.5
 pip==21.1.2
-setuptools==56.0.0
+setuptools==70.0.0
 
 # Energia dependencies
 energia-core==1.2.3
