@@ -6,7 +6,7 @@
 
 # energonexus-monorepo
 
-The monorepo for Energonexus ( A  decentralized energy trading platform that connects Pi Nodes to optimize energy production, consumption, and storage.) , containing all the code, logic, and assets for the platform.
+The monorepo for Energonexus ( A  decentralized energy trading platform that connects Pi Nodes to optimize energy production, consumption, and storage ) , containing all the code, logic, and assets for the platform.
 
 # EnergONexus Monorepo
 =====================
