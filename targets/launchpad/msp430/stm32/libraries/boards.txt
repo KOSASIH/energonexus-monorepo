@@ -1,0 +1,27 @@
+# Boards supported by Energia
+
+# MSP430 boards
+msp430.launchpad.board=LaunchPad MSP430
+msp430.launchpad.build.core=msp430
+msp430.launchpad.build.variant=launchpad
+msp430.launchpad.upload.protocol=msp430
+msp430.launchpad.upload.maximum_size=16384
+
+msp430.exp430.board=Experimenter Board MSP430
+msp430.exp430.build.core=msp430
+msp430.exp430.build.variant=exp430
+msp430.exp430.upload.protocol=msp430
+msp430.exp430.upload.maximum_size=16384
+
+# STM32 boards
+stm32.nucleo.board=Nucleo STM32
+stm32.nucleo.build.core=stm32
+stm32.nucleo.build.variant=nucleo
+stm32.nucleo.upload.protocol=stm32
+stm32.nucleo.upload.maximum_size=524288
+
+stm32.discovery.board=Discovery STM32
+stm32.discovery.build.core=stm32
+stm32.discovery.build.variant=discovery
+stm32.discovery.upload.protocol=stm32
+stm32.discovery.upload.maximum_size=524288
