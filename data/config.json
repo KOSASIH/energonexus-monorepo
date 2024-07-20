@@ -1,0 +1,25 @@
+{
+  "energy_production": {
+    "solar_panel_efficiency": 0.2,
+    "wind_turbine_efficiency": 0.5,
+    "hydroelectric_power_plant_efficiency": 0.9
+  },
+  "energy_consumption": {
+    "household_appliances_power_consumption": 1000,
+    "electric_vehicle_charging_power_consumption": 3000,
+    "industrial_machinery_power_consumption": 5000
+  },
+  "energy_storage": {
+    "battery_capacity": 10000,
+    "battery_efficiency": 0.8
+  },
+  "visualization": {
+    "matplotlib_backend": "TkAgg",
+    "matplotlib_style": "seaborn-whitegrid"
+  },
+  "blockchain": {
+    "block_size": 10,
+    "block_time": 10,
+    "difficulty_target": 100
+  }
+}
