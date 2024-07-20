@@ -1,0 +1,19 @@
+# EnergONexus monorepo dependencies
+
+# Python dependencies
+python==3.9.5
+pip==21.1.2
+setuptools==56.0.0
+
+# Energia dependencies
+energia-core==1.2.3
+energia-tools==1.1.2
+
+# Development dependencies
+pytest==6.2.4
+pylint==2.10.2
+mypy==0.910
+
+# Documentation dependencies
+sphinx==4.1.2
+sphinx-rtd-theme==1.0.0
