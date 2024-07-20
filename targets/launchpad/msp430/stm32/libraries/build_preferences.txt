@@ -1,0 +1,21 @@
+# Build preferences for Energia
+
+# Compiler flags
+CFLAGS = -Wall -Werror -Os -g
+CXXFLAGS = -Wall -Werror -Os -g
+
+# Linker flags
+LDFLAGS = -Wl,--gc-sections -Wl,--relax
+
+# Library paths
+LIBRARY_PATHS = /usr/lib/energia /usr/local/lib/energia
+
+# Include paths
+INCLUDE_PATHS = /usr/include/energia /usr/local/include/energia
+
+# Board-specific settings
+BOARD_MSP430 = msp430
+BOARD_STM32 = stm32
+
+# Default board
+DEFAULT_BOARD = BOARD_MSP430
