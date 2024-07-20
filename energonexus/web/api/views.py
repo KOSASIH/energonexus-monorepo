@@ -1,8 +1,8 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from celery import shared_task
+from graphql import GraphQLSchema, GraphQLObjectType, GraphQLString
 from energonexus.core.models import EnergyConsumption
-from energonexus.core.serializers import EnergyConsumptionSerializer
+from energonexus.core.schema import EnergyConsumptionType
 
 class EnergyConsumptionView(APIView):
     def get(self, request):
@@ -14,11 +14,24 @@ class EnergyConsumptionView(APIView):
         serializer = EnergyConsumptionSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            process_energy_data.delay(serializer.data)
             return Response(serializer.data, status=201)
        return Response(serializer.errors, status=400)
 
-@shared_task
-def process_energy_data(energy_data):
-    # process energy data asynchronously
-    ...
+    def get(self, request):
+        schema = GraphQLSchema(query=EnergyConsumptionType)
+        query = """
+        query {
+          energyConsumptions {
+            id
+            timestamp
+            energyConsumption
+          }
+        }
+        """
+        result = schema.execute(query)
+        return Response(result.data)
+
+class EnergyConsumptionType(GraphQLObjectType):
+    class Meta:
+        name = 'EnergyConsumption'
+        fields = ('id', 'timestamp', 'energyConsumption')
